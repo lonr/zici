@@ -2,3 +2,4 @@ dist
 node_modules
 todo.md
 package-lock.json
+gulpfile.js
