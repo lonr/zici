@@ -1,0 +1,25 @@
+{
+  "name": "zici",
+  "version": "0.1.0",
+  "description": "A WebExtension by lonr",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/chrome": "*",
+    "@types/del": "*",
+    "@types/gulp": "*",
+    "del": "*",
+    "gulp": "*",
+    "gulp-typescript": "*",
+    "idb-file-storage": "*",
+    "tslint": "*",
+    "typescript": "*",
+    "webextension-polyfill": "*"
+  },
+  "scripts": {
+    "build": "tsc gulpfile.ts && gulp build",
+    "watch": "tsc gulpfile.ts && gulp watch",
+    "deploy": "cd dist && web-ext run --bc -f=\"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\""
+  },
+  "author": "lonr",
+  "license": "GPL-3.0"
+}

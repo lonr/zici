@@ -1,0 +1,47 @@
+.zici {
+    box-sizing: border-box;
+    position: fixed;
+    margin: 0;
+    border-radius: 3px;
+    width: auto;
+    padding: 3px;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 1px 1px 6px -4px rgb(0,0,0);
+    background: #fff;
+}
+
+.zici p, .zici div, .zici span {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    background: unset;
+}
+
+.zici ul {
+    list-style: none;
+    margin: 2px 0;
+    padding-left: 0;
+}
+
+.zici .zici-title-symbol {
+    margin-left: 1em;
+}
+
+.zici .zici-title-symbol::before {
+    content: "[";
+}
+
+.zici .zici-title-symbol::after {
+    content: "]";
+}
+
+.zici .zici-dfn-pos {
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 0.4em;
+    width: 2.5em;
+    vertical-align: bottom;
+    text-overflow: clip;
+}

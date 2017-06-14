@@ -1,0 +1,51 @@
+{
+  "manifest_version": 2,
+  "name": "Words Marker",
+  "version": "0.1",
+  "description": "标记页面中的生词",
+  "homepage_rul": "https://github.com/lonr/wordsmarker",
+  "icons": {
+    "48": "icons/wm.png",
+    "96": "icons/wm@2x.png",
+    "128": "icons/wm@3x.png"
+  },
+  "permissions": [
+    "https://openapi.youdao.com/*",
+    "http://xtk.azurewebsites.net/*",
+    "activeTab"
+  ],
+  "background": {
+    "scripts": [
+      "lib/browser-polyfill.min.js",
+      "lib/md5.js",
+      "dicts/youdao.js",
+      "dicts/bing.js",
+      "background/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "all_frames": false,
+      "js": [
+        "lib/browser-polyfill.min.js",
+        "content/content.js"
+      ],
+      "css": [
+        "content/content.css"
+      ]
+
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "48": "res/wm.png",
+      "96": "res/wm-96.png",
+      "128": "res/wm-128.png"
+    },
+    "default_title": "ok?",
+    "default_popup": "popup/popup.html"
+  }
+}

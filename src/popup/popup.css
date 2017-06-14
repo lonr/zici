@@ -1,0 +1,29 @@
+html, body {
+    width: 150px;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, "Microsoft YaHei", sans-serif;
+    font-weight: 16px;
+    color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.mode p {
+    margin: 3px 10px;
+    /*border-radius: 4px;*/
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    background: #fff;
+    cursor: pointer;
+    background: lightgreen;
+}
+
+.mode .on {
+    background: steelblue;
+}

@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": " watch",
+            "command": "tsc",
+            "isBackground": true,
+            "isShellCommand": true,
+            "args": [
+                "-w"
+            ],
+            "showOutput": "silent",
+            "problemMatcher": [
+                "$tsc-watch"
+            ]
+        },
+        {
+            "taskName": "build",
+            "command": "tsc",
+            "isShellCommand": true,
+            "isBuildCommand": true,
+            "args": [
+                "-p",
+                "."
+            ],
+            "showOutput": "silent",
+            "problemMatcher": "$tsc"
+        },
+        {
+            "customize": "gulp.build",
+            "taskName": "gulp: build",
+            "problemMatcher": []
+        },
+        {
+            "customize": "vscode.npm.run deploy",
+            "taskName": "npm: run deploy",
+            "problemMatcher": []
+        }
+    ]
+}
