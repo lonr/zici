@@ -14,7 +14,7 @@ class Marker {
                 this.sendLookUpRequest(word)
                     .then((res) => {
                         // TODO：错误怎么处理呀？？完全是在瞎写
-                        if (!("err" in res)) {
+                        if (!(res as DictErr).err) {
                             this.showDfn(res, {
                                 x: evt.clientX,
                                 y: evt.clientY,
@@ -42,7 +42,7 @@ class Marker {
     }
 
     private sendLookUpRequest(word: string): Promise<DictRes | DictErr> {
-        return chrome.runtime.sendMessage({
+        return browser.runtime.sendMessage({
             word: word,
         }).catch((reason) => {
             console.log(`err on sendMessage: ${reason}`);

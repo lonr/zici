@@ -1,6 +1,6 @@
 // https://zhuanlan.zhihu.com/p/22421123?refer=MSFaith
 // trying to use undefined...may be wrong
-// but how should I white these...
+// but how should I write these...
 interface Pronunciation {
     // single phonetic and can't be classified
     DftE?: string;

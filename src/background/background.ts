@@ -12,8 +12,7 @@ let bing = new Bing();
 //     console.log(result);
 // });
 
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    bing.lookUp(request.word).then(sendResponse).catch(console.log);
-    return true;
+browser.runtime.onMessage.addListener(request => {
+    return bing.lookUp(request.word).catch(console.log);
 });
 
